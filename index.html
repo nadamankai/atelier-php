@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<form action="recap.php" method="POST"  enctype="multipart/form-data">
+    <label>nom</label><input type="text" name="nom">
+    <br><br>
+    <label>prenom</label><input type="text" name="prenom">
+    <br><br>
+    <label>nombre sandwitchs</label><input type="number" name="nbre">
+    <br><br>
+    <label>adresse</label><TEXTAREA NAME="adresse"
+              ROWS=5 COLS=40></TEXTAREA>
+    <br><br>
+    <label>type sandwitch</label>
+   <SELECT NAME="type">
+    <OPTION VALUE="viande"> viande
+    <OPTION VALUE="poulet"> poulet
+    <OPTION VALUE="escalope"> escalope
+        </SELECT>
+    <br><br>
+    <label> les ingrédients à ajouter</label>
+    <INPUT TYPE ="checkbox" NAME ="ingredients[]" VALUE="harissa" > harissa
+    <INPUT TYPE ="checkbox" NAME ="ingredients[]" VALUE="salade ">salade
+    <INPUT TYPE ="checkbox" NAME ="ingredients[]" VALUE="mayo "> mayo
+
+    <br><br>
+    <label>CIN :</label><input type="file" name="fichier"/>
+    <INPUT TYPE="submit" VALUE="Valider">
+</form>
+
+
+</body>
+</html>

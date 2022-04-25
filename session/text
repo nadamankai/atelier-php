@@ -1,0 +1,57 @@
+if (isset($_SESSION['nbre'])){
+    $_SESSION['nbre']++ ;
+    echo "bienvenue merci pour votre fidelite c'est votre ${_SESSION['nbre']} visites";
+
+}
+else {
+    $_SESSION['nbre']=1 ;
+    echo "bienvenue merci pour votre fidelite c'est votre premiere visite ";
+}
+-----------------------
+/*
+ * phpsesid
+ *
+ * $_SESSION
+ * SESSION8START()
+ *
+ *
+ * session_destroy()
+ */
+session_start();
+$_SESSION['username']='nada mankai';
+$_SESSION['age ']='20';
+unset($_SESSION['username']);
+
+<p> Bonjour <?= htmlspecialchars($_SESSION['username'])?> j'ai <?=$_SESSION['age ']?></p>
+---------------------
+
+
+    <div class="border"   class="col-md-6 offset-md-3" style="width:900px" >
+
+        <div  class="row" style="width:900px" >
+            <input type="text" name="title"   class="border-0" placeholder="titre"  style="height:30px"></input>
+        </div>
+
+        <div class="row" class="row align-items-start" style="width:900px" >
+            <textarea  name="note"  class="border-0" placeholder="Creer une note"   style="height: 100px"></textarea>
+        </div>
+
+    </div>
+
+    <button type="submit" class="btn btn-dark position-relative" style="width:450px">
+        Ajouter note <svg  height="1em" viewBox="0 0 16 16" class="position-absolute top-100 start-50 translate-middle mt-1 bi bi-caret-down-fill" fill="#212529" xmlns="http://www.w3.org/2000/svg"><path d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/></svg>
+    </button>
+
+
+    <a style="width:450px" id="bouton" name="bouton" class="btn btn-dark position-relative" type="submit" href="note.php" >Voire notes
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="position-absolute top-100 start-50 translate-middle mt-1 bi bi-caret-down-fill" fill="#212529" xmlns="http://www.w3.org/2000/svg"><path d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/></svg>
+    </a>
+
+    ***********************
+    <!--    <div class="row" style="width:900px">-->
+        <!--    <div class="col-8" >-->
+        <!--        <input type="text" name="title"   class="border-0" placeholder="titre"  style="width:575px"></input>-->
+        <!--        <br>-->
+        <!--        <textarea class="form-control " placeholder="note"  id="floatingTextarea"  style="height: 100px"></textarea>-->
+        <!--    </div>-->
+        <!--    </div>-->
